@@ -11,6 +11,7 @@ service DataService {
 message GetECLRequest {
   int32 deptId = 1;
   int32 year = 2;
+  int32 userId = 3;
 }
 
 message GetECLResponse {
