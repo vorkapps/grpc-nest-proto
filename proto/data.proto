@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package data;
+
+service DataService {
+  rpc GetECL (GetECLRequest) returns (GetECLResponse) {}
+}
+
+// GetECL
+
+message GetECLRequest {
+  int32 deptId = 1;
+  int32 year = 2;
+}
+
+message GetECLResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
+}
+
