@@ -19,7 +19,7 @@ message RegisterRequest {
   string firstName = 4;
   string lastName = 5;
   string email = 6;
-  bool isAdmin = 7
+  bool isAdmin = 7;
 }
 
 message RegisterResponse {
