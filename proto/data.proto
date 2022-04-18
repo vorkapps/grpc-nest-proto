@@ -3,15 +3,21 @@ syntax = "proto3";
 package data;
 
 service DataService {
-  rpc GetECL (GetECLRequest) returns (GetECLResponse) {}
+  rpc GetECLData (GetECLRequest) returns (GetECLResponse) {}
+  rpc GetDepartment (GetDepartmentRequest) returns (GetDepartmentResponse) {}
+  rpc GetBuckets (GetBucketsRequest) returns (GetBucketsResponse) {}
+  rpc GetDistricts (GetDistrictsRequest) returns (GetDistrictsResponse) {}
+  rpc GetProcessLog (GetProcessLogRequest) returns (GetProcessLogResponse) {}
+  rpc GetRecoveryRatePeriods (GetRecoveryRatePeriodRequest) returns (GetRecoveryRatePeriodResponse) {}
 }
 
-// GetECL
+// GetECLData
 
 message GetECLRequest {
   int32 deptId = 1;
-  int32 year = 2;
-  int32 userId = 3;
+  int32 yearFrom = 2;
+  int32 yearTo = 3;
+  int32 userId = 4;
 }
 
 message GetECLResponse {
@@ -20,3 +26,64 @@ message GetECLResponse {
   string data = 3;
 }
 
+// GetDepartments
+
+message GetDepartmentRequest {
+  int32 deptId = 1;
+}
+
+message GetDepartmentResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
+}
+
+// GetBuckets
+
+message GetBucketsRequest {
+  int32 deptId = 1;
+}
+
+message GetBucketsResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
+}
+
+// GetDistricts
+
+message GetDistrictsRequest {
+  int32 deptId = 1;
+}
+
+message GetDistrictsResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
+}
+
+// GetProcessLog
+
+message GetProcessLogRequest {
+  int32 deptId = 1;
+  int32 yearFrom = 2;
+  int32 yearTo = 3;
+}
+
+message GetProcessLogResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
+}
+
+// GetRecoveryRatePeriods
+
+message GetRecoveryRatePeriodRequest {
+  int32 deptId = 1;
+}
+
+message GetRecoveryRatePeriodResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
+}

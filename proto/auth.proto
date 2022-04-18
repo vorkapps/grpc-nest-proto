@@ -6,6 +6,8 @@ service AuthService {
   rpc Register (RegisterRequest) returns (RegisterResponse) {}
   rpc Login (LoginRequest) returns (LoginResponse) {}
   rpc Validate (ValidateRequest) returns (ValidateResponse) {}
+  rpc GetUser (GetUserRequest) returns (GetUserResponse) {}
+  rpc GetUserDepartments (GetUserDepartmentsRequest) returns (GetUserDepartmentsResponse) {}
 }
 
 // Register
@@ -43,4 +45,28 @@ message ValidateResponse {
   int32 status = 1;
   repeated string error = 2;
   int32 userId = 3;
+}
+
+// GetUser
+
+message GetUserRequest {
+  int32 userId = 1;
+}
+
+message GetUserResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
+}
+
+// GetUserDepartments
+
+message GetUserDepartmentsRequest {
+  int32 userId = 1;
+}
+
+message GetUserDepartmentsResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
 }
