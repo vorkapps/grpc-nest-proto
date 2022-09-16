@@ -15,7 +15,7 @@ service AuthService {
 message RegisterRequest {
   string userName = 1;
   string password = 2;
-  int32 idDept = 3;
+  int32 deptIdNo = 3;
   string firstName = 4;
   string lastName = 5;
   string email = 6;
