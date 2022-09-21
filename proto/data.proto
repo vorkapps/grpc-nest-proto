@@ -6,7 +6,7 @@ service DataService {
   rpc GetECLData (GetECLRequest) returns (GetECLResponse) {}
   rpc GetDepartment (GetDepartmentRequest) returns (GetDepartmentResponse) {}
   rpc GetBuckets (GetBucketsRequest) returns (GetBucketsResponse) {}
-  rpc GetDistricts (GetDistrictsRequest) returns (GetDistrictsResponse) {}
+  rpc GetSegments (GetSegmentsRequest) returns (GetSegmentsResponse) {}
   rpc GetProcessLog (GetProcessLogRequest) returns (GetProcessLogResponse) {}
   rpc GetRecoveryRatePeriods (GetRecoveryRatePeriodRequest) returns (GetRecoveryRatePeriodResponse) {}
 }
@@ -50,13 +50,13 @@ message GetBucketsResponse {
   string data = 3;
 }
 
-// GetDistricts
+// GetSegments
 
-message GetDistrictsRequest {
+message GetSegmentsRequest {
   int32 deptId = 1;
 }
 
-message GetDistrictsResponse {
+message GetSegmentsResponse {
   int32 status = 1;
   repeated string error = 2;
   string data = 3;
