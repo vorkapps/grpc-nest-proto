@@ -22,8 +22,8 @@ message UploadResponse {
 }
 
 message CallBackRequest {
-  object values = 1;
-  object data = 2;
+  Struct values = 1;
+  Struct data = 2;
 }
 
 message CallBackResponse {
