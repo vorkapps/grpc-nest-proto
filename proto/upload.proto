@@ -4,7 +4,7 @@ package upload;
 
 service UploadService {
   rpc UploadFile (UploadRequest) returns (UploadResponse) {}
-  rpc CallBack returns (CallBackResponse) {}
+  rpc CallBack () returns (CallBackResponse) {}
 }
 
 message UploadRequest {
