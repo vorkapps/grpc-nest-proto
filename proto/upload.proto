@@ -4,6 +4,7 @@ package upload;
 
 service UploadService {
   rpc UploadFile (UploadRequest) returns (UploadResponse) {}
+  rpc CallBack returns (CallBackResponse) {}
 }
 
 message UploadRequest {
@@ -18,4 +19,10 @@ message UploadResponse {
   int32 status = 1;
   repeated string error = 2;
   int32 id = 3;
+}
+
+message CallBackResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string data = 3;
 }
