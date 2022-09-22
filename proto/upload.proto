@@ -22,7 +22,8 @@ message UploadResponse {
 }
 
 message CallBackRequest {
-  string data = 1;
+  object values = 1;
+  object data = 2;
 }
 
 message CallBackResponse {
