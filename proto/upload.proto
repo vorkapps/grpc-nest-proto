@@ -22,14 +22,8 @@ message UploadResponse {
 }
 
 message CallBackRequest {
-  message Values {
-    repeated string value = 1;
-  };
-  message Data {
-    repeated string value = 1;
-  };
-  Values values = 1;
-  Data data = 2;
+  string values = 1;
+  string data = 2;
 }
 
 message CallBackResponse {
